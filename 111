@@ -1,3 +1,0 @@
-jdbc.password: admin
-jdbc.url: jdbc.oracle:thin
-jdbc.username: zhangsan
