@@ -1,0 +1,20 @@
+eureka:
+  client:
+    service-url:
+      #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址。
+      defaultZone: http://localhost:8801/eureka/
+  instance:
+    instance-id: user-demo #自定义服务名称信息
+    prefer-ip-address: true #访问路径可以显示IP地址
+
+spring:
+  application:
+    name: user-demo
+server:
+  port: 8803
+info:
+  app:
+    name: user-demo
+  build:
+    artifactId: user-demo
+    version: 0.0.1-SNAPSHOT

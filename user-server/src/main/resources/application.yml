@@ -1,0 +1,31 @@
+eureka:
+  client:
+    service-url:
+      #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址。
+      defaultZone: http://localhost:8801/eureka/
+  instance:
+    instance-id: user-server #自定义服务名称信息
+    prefer-ip-address: true #访问路径可以显示IP地址
+
+spring:
+  application:
+    name: user-server
+  cloud:
+    config:
+      server:
+          git:
+            uri: https://github.com/xiaoping-183/spingcloud/  #github 仓库地址
+#            search-paths: config-repo #配置中心
+            username: xiaoping-183
+            password: xpc9539118279
+server:
+  port: 8802
+info:
+  app:
+    name: user-server
+  build:
+    artifactId: user-server
+    version: 0.0.1-SNAPSHOT
+feign:
+   hystrix:
+     enabled: true

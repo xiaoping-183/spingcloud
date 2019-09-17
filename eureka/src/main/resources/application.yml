@@ -1,0 +1,11 @@
+# Tomcat
+server:
+  port: 8801
+eureka:
+ instance:
+   hostname: localhost
+ client:
+   register-with-eureka: false #表示是否注册eureka服务器，因为自身作为服务注册中心，所以为false
+   fetch-registry: false #是否从eureka获取注册信息，同上
+   service-url:
+    defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
